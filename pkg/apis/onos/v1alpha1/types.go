@@ -10,9 +10,16 @@ import (
 
 // OnosClusterSpec defines the desired state of OnosCluster
 type OnosClusterSpec struct {
-	Size      int32                   `json:"size,omitempty"`
+	Size      int32                       `json:"size,omitempty"`
 	Env       []corev1.EnvVar             `json:"env,omitempty"`
 	Resources corev1.ResourceRequirements `json:"resources,omitempty"`
+	Apps      []string                    `json:"apps,omitempty"`
+	Atomix    AtomixClusterSpec           `json:"atomix,omitempty"`
+}
+
+// AtomixClusterSpec defines the desired state of the Atomix cluster
+type AtomixClusterSpec struct {
+	Service string `json:"service,omitempty"`
 }
 
 // OnosClusterStatus defines the observed state of OnosCluster
