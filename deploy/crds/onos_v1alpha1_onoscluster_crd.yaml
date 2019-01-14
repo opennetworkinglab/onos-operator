@@ -1,0 +1,15 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: onosclusters.onos.opennetworking.org
+spec:
+  group: onos.opennetworking.org
+  names:
+    kind: OnosCluster
+    listKind: OnosClusterList
+    plural: onosclusters
+    singular: onoscluster
+  scope: Namespaced
+  version: v1alpha1
+  subresources:
+    status: {}

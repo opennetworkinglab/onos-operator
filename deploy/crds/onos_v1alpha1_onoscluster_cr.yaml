@@ -1,0 +1,7 @@
+apiVersion: onos.opennetworking.org/v1alpha1
+kind: OnosCluster
+metadata:
+  name: example-onoscluster
+spec:
+  # Add fields here
+  size: 3
