@@ -1,4 +1,4 @@
-package onoscluster
+package cluster
 
 import (
 	"context"
